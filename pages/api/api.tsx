@@ -65,7 +65,7 @@ async function handleGenerateText(req: NextApiRequest, res: NextApiResponse) {
   async function processInBackground(prompt: string, jobId: string) {
     try {
       const completion = await openai.chat.completions.create({
-        model: "gpt-4-turbo",
+        model: "gpt-4o",
         messages: [
           {
             role: "user",

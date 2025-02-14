@@ -66,11 +66,24 @@ function VoteIntention({ onIntentionChange, color }) {
             justify-content: space-between;
             padding: 0 10px;
             margin-top: 5px;
+            position: relative;
           }
           .tick-label {
             font-size: 12px;
             color: #666;
+            position: absolute;
+          }
+          .tick-label:nth-child(1) {
+            left: 0;
+            transform: translateX(0);
+          }
+          .tick-label:nth-child(2) {
+            left: 50%;
             transform: translateX(-50%);
+          }
+          .tick-label:nth-child(3) {
+            right: 0;
+            transform: translateX(0);
           }
           .confidence-display {
             text-align: center;

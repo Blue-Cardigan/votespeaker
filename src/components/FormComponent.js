@@ -55,6 +55,7 @@ const FormComponent = () => {
     let newPrompt = `
     You're ${candidateName}, the candidate for local ${partyInfo[colorIndex].partyName} MP in ${constituency}, writing to a voter in the style of ${style}. 
     Write a concise letter ${nameOccupationLocation} ${voteIntention} to ${action} in the upcoming election.
+    Ensure your letter is no more than 200 words.
     `
 
     if (selectedTones.length > 0) {

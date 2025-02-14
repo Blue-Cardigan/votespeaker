@@ -506,8 +506,8 @@ h1 {
 } */
 
 .response-header {
-  margin: 0 auto; /* Adjust top margin as needed, remove left and right margins */
-  padding: 10px 20px; /* Keep padding to match .response-container */
+  margin: 0 auto;
+  padding: 10px 20px;
   background-color: #007bff;
   color: white;
   border-top-left-radius: 12px;
@@ -516,14 +516,38 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-sizing: border-box; /* Ensures padding is included in the width */
+  box-sizing: border-box;
   cursor: pointer;
   margin-left: -20px;
   width: 105.3%;
+  transition: background-color 0.3s ease;
+  position: relative;
+}
+
+.response-header:hover {
+  background-color: #0056b3;
+}
+
+.response-header::after {
+  content: 'Click to copy';
+  position: absolute;
+  right: 45px;
+  font-size: 12px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.response-header:hover::after {
+  opacity: 1;
 }
 
 .response-header.copied {
-  background-color: #28a745; /* Change background color when copied */
+  background-color: #28a745;
+}
+
+.response-header.copied::after {
+  content: 'Copied!';
+  opacity: 1;
 }
 
 .copy-button {
@@ -692,6 +716,9 @@ h1 {
     width: 100%; /* Set the width to 100% of the parent container */
     margin-top: 10px; /* Add space between the buttons */
     margin-right: 0; /* Align with the header's padding */
+  }
+  .response-header::after {
+    display: none;
   }
 }
 

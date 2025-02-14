@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 function VoteIntention({ onIntentionChange, color }) {
   const [voterIntention, setVoterIntention] = useState('');
@@ -31,11 +31,52 @@ function VoteIntention({ onIntentionChange, color }) {
     <div>
       <style>
         {`
+          .intention-slider {
+            width: 100%;
+            margin: 10px 0;
+          }
           .intention-slider::-webkit-slider-thumb {
             background: ${color};
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            cursor: pointer;
+            -webkit-appearance: none;
+            margin-top: -8px;
           }
           .intention-slider::-moz-range-thumb {
             background: ${color};
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            cursor: pointer;
+          }
+          .intention-slider::-webkit-slider-runnable-track {
+            height: 4px;
+            background: #ddd;
+            border-radius: 2px;
+          }
+          .intention-slider::-moz-range-track {
+            height: 4px;
+            background: #ddd;
+            border-radius: 2px;
+          }
+          .tick-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 10px;
+            margin-top: 5px;
+          }
+          .tick-label {
+            font-size: 12px;
+            color: #666;
+            transform: translateX(-50%);
+          }
+          .confidence-display {
+            text-align: center;
+            margin: 10px 0;
+            font-weight: bold;
+            color: ${color};
           }
         `}
       </style>
@@ -65,6 +106,9 @@ function VoteIntention({ onIntentionChange, color }) {
         {showSecondDropdown && (
           <div className="intentionScale">
             <label htmlFor="intentionScale">Confidence:</label>
+            <div className="confidence-display">
+              {confidenceWords[intentionScale]}
+            </div>
             <input
               type="range"
               id="intentionScale"
@@ -72,12 +116,12 @@ function VoteIntention({ onIntentionChange, color }) {
               min="1"
               max="10"
               value={intentionScale}
-              onChange={(e) => setIntentionScale(e.target.value)}
+              onChange={(e) => setIntentionScale(parseInt(e.target.value))}
             />
-            <div className="tick-marks">
-              {[...Array(10)].map((_, index) => (
-                <span key={index} style={{ left: `${index * 10.22}%` }}></span>
-              ))}
+            <div className="tick-container">
+              <span className="tick-label">Very Uncertain</span>
+              <span className="tick-label">Neutral</span>
+              <span className="tick-label">Extremely Confident</span>
             </div>
           </div>
         )}

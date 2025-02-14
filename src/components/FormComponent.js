@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import ContentTypeDropdown from './ContentTypeDropdown';
 import AudienceDropdown from './AudienceDropdown';
 import DescriptionTextArea from './DescriptionTextArea';

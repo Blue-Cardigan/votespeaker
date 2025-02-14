@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const StyleArea = ({ style, setStyle, color }) => {
   const [inputMethod, setInputMethod] = useState('buttons'); // 'buttons' or 'freeText'

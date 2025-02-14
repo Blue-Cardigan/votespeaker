@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import FormComponent from '../src/components/FormComponent';
 import '../styles/index.css'; // Adjust the path based on your structure
 import { AppProps } from 'next/app';

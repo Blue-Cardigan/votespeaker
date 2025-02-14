@@ -1,5 +1,3 @@
-import React from 'react';
-
 const ContentTypeDropdown = ({ onContentTypeChange }) => {
   return (
     <div>

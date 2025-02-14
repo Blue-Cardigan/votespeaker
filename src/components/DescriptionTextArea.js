@@ -1,11 +1,4 @@
-import React from 'react';
-
 const DescriptionTextArea = ({ description, setDescription }) => {
-  const handleChange = (e) => {
-    // Prepend the specific text to the new value entered by the user
-    const newValue = `Use relevant policy details from the following: ${e.target.value}`;
-    setDescription(newValue);
-  };
 
   return (
     <div className="description-text-area">

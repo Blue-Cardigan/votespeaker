@@ -93,7 +93,7 @@ const FormComponent = () => {
       const linkText = 'Write letters like this at scale';
       doc.setTextColor(0, 0, 139); // Darker blue
       const xPositionForLink = doc.internal.pageSize.width - margins.left - doc.getTextWidth(linkText);
-      doc.textWithLink(linkText, xPositionForLink, footerY + 10, { url: 'https://wyza.uk' });
+      doc.textWithLink(linkText, xPositionForLink, footerY + 10, { url: 'https://civita.co.uk' });
       doc.setFont('Calibri'); // Reset font style after link
       doc.setTextColor(0, 0, 0); //Set text to black
     };

@@ -22,7 +22,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       {showPolicy && (
         <div className="policy-popup">
         <p><strong>Remember:</strong> this is a demo to demonstrate how AI can be used to produce campaign content.</p>
-        <p><strong>Do not</strong> disclose any sensitive material, such as individual information, strategy documents, or sensitive personal data, to Votespeaker. It is crucial to remember that you are responsible for protecting the data you manage. Please abide by your existing Data protection policy when you are using Votespeaker. If you are interested in using this tool beyond demo purposes in a way complies with data protection contact Wyza data.</p>
+        <p><strong>Do not</strong> disclose any sensitive material, such as individual information, strategy documents, or sensitive personal data, to Votespeaker. It is crucial to remember that you are responsible for protecting the data you manage. Please abide by your existing Data protection policy when you are using Votespeaker. If you are interested in using this tool beyond demo purposes in a way which complies with data protection contact Campaign Lab.</p>
         <p><strong>Do</strong> remember that when using AI tools, you are ultimately responsible for the final output. You should therefore verify any factual claims, check for logical and grammatical errors, and ensure that the content adheres to your organisation's standards and values.</p>
         <p><strong>Do not</strong> use AI to generate fake or harmful information.</p>
         <p><strong>Do</strong> make sure all and any campaign materials that will be received by people are authored by a human being.</p>
@@ -42,7 +42,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       </main>
       <footer className="page-footer">
         <div>Can I use my own database to write personalised letters like this to thousands of constituents?</div>   
-        <div><a href="https://www.wyza.uk/"> Yes. Find Out More</a></div>
+        <div><a href="https://civita.co.uk/"> Yes. Find Out More</a></div>
       </footer>
     </div>
   );

@@ -10,13 +10,10 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     <div className="App">
       <div className="page-header" style={{ display: 'flex', justifyContent: 'space-between' }}>
         <div style={{ display: 'flex', flexDirection: 'column' }}>
-          <h1>VoteSpeaker AI</h1>
-          <div className="link-container">
-            <a href="https://www.wyza.uk" target="_blank" rel="noopener noreferrer" style={{ fontSize: 'small' }}>from Wyza</a>
-          </div>
+          <h1>VoteSpeaker</h1>
         </div>
         <div style={{ textAlign: 'right' }}>
-          <a href="https://www.campaignlab.uk/" target="_blank" rel="noopener noreferrer" style={{ textAlign: 'right' }}>Incubated by CampaignLab</a>
+          <a href="https://www.campaignlab.uk/" target="_blank" rel="noopener noreferrer" style={{ textAlign: 'right' }}>CampaignLab</a>
           <div>
             <span className="policy-disclaimer" onClick={() => setShowPolicy(!showPolicy)}>Policy Disclaimer</span>
           </div>

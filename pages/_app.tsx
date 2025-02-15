@@ -33,7 +33,6 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       <header className="App-header">
         <div className="text-container">
           <h1 className="title-text">Draft letters to sway voters and bolster support.</h1>
-          <p className="description-text">Enter a hypothetical voter's details below, then click 'Write Letter' to generate a personalised campaign letter.</p>
         </div>
       </header>
       <main>

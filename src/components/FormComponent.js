@@ -44,8 +44,8 @@ const FormComponent = () => {
     
     if (description) {
       action = voteIntention.includes(partyInfo[colorIndex].partyName) ?
-        "thank them, and encourage them to continue their support for the party using the following policies: \n${description}" :
-        "identify their key concerns and persuade them to support you and your party using the following policies: \n${description}";
+        `thank them, and encourage them to continue their support for the party using the following policies: \n${description}` :
+        `identify their key concerns and persuade them to support you and your party using the following policies: \n${description}`;
     } else {
       action = voteIntention.includes(partyInfo[colorIndex].partyName) ?
         "thank them, and encourage them to continue their support for the party" :
@@ -54,7 +54,7 @@ const FormComponent = () => {
 
     let newPrompt = `
     You're ${candidateName}, the candidate for local ${partyInfo[colorIndex].partyName} MP in ${constituency}, writing to a voter in the style of ${style}. 
-    Write a concise letter ${nameOccupationLocation} ${voteIntention} to ${action} in the upcoming election.
+    Write a concise letter ${nameOccupationLocation} ${voteIntention} to ${action}.
     Ensure your letter is no more than 200 words.
     `
 
